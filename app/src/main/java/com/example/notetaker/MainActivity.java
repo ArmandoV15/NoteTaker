@@ -1,3 +1,13 @@
+/**
+ * This program allows the user to create, edit, and delete notes utilizing Buttons, EditTexts, Spinners, and ListViews
+ * CPSC 312-01, Fall 2019
+ * Programming Assignment #6
+ * No sources to cite.
+ *
+ * @author Armando Valdez
+ * @version v1.0 11/6/19
+ */
+
 package com.example.notetaker;
 
 import androidx.annotation.Nullable;
