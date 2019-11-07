@@ -27,7 +27,6 @@ public class NoteActivity extends AppCompatActivity {
         MyNoteGridLayout myGridLayout = new MyNoteGridLayout(this);
         setContentView(myGridLayout);
 
-
         Intent intent = getIntent();
         EditText title = findViewById(R.id.editTitle);
         Spinner spinner = findViewById(R.id.typeSpinner);

@@ -31,11 +31,9 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     static final int LOGIN_REQUEST_CODE = 1;
-    static final String TAG = "MainActivity";
 
     List<Note> myNotes = new ArrayList<>();
     ArrayAdapter<Note> arrayAdapter;
-
 
     /**
      This onActivityResult allows the program to get the results from my second activity when the user presses the "Done" button.
@@ -54,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             String type = data.getStringExtra("type");
             String content = data.getStringExtra("content");
             int edited = data.getIntExtra("index", -1);
-            Log.d(TAG, "" + edited);
+
             if (edited > -1) {
                 myNotes.set(edited, new Note(title, type, content));
                 arrayAdapter.notifyDataSetChanged();
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
                 arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, myNotes);
                 notesList.setAdapter(arrayAdapter);
                 arrayAdapter.notifyDataSetChanged();
-                Log.d(TAG, "add new");
             }
         }
     }
